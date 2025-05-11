@@ -1,0 +1,276 @@
+/* Basic Reset and Global Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Basic Nav Styling */
+nav {
+  background-color: #007bff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Basic Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form input[type="file"],
+form select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button.secondary {
+  background-color: #6c757d;
+}
+button.secondary:hover {
+  background-color: #545b62;
+}
+
+button.danger {
+    background-color: #dc3545;
+}
+button.danger:hover {
+    background-color: #c82333;
+}
+
+
+/* Basic Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.actions button {
+    margin-right: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+.page-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+/* Basic Navbar Styling */
+.app-navbar {
+  background-color: #007bff; /* Blue background */
+  padding: 0.75rem 1.5rem;   /* Padding around the content */
+  margin-bottom: 2rem;       /* Space below the navbar */
+  border-radius: 4px;        /* Slightly rounded corners */
+  
+  display: flex;             /* THIS IS KEY: Makes .navbar-links and .navbar-user-actions flex items */
+  justify-content: space-between; /* THIS IS KEY: Pushes .navbar-links to left, .navbar-user-actions to right */
+  align-items: center;       /* Vertically aligns the content of .navbar-links and .navbar-user-actions */
+  
+  color: white;              /* Default text color for items inside the navbar */
+  box-sizing: border-box;    /* Ensures padding and border don't add to width/height */
+  width: 100%;               /* Make navbar take full available width */
+}
+
+/* Styling for the <ul> elements within both sections of the navbar */
+.app-navbar ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex;         /* Arrange <li> items in a row */
+  align-items: center;   /* Vertically align <li> items */
+  gap: 1.25rem;          /* Space between <li> items */
+}
+
+/* Specifically for the main navigation links section */
+.app-navbar .navbar-links ul {
+  /* No specific styles needed here beyond the general .app-navbar ul if structure is simple */
+}
+
+.app-navbar .navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease-in-out;
+}
+
+.app-navbar .navbar-links a:hover {
+  color: #cce5ff;
+}
+
+/* Specifically for the user actions section (welcome message, logout) */
+.app-navbar .navbar-user-actions ul {
+  /* No specific styles needed here beyond the general .app-navbar ul if structure is simple */
+}
+
+.app-navbar .nav-username {
+  margin-right: 1rem; /* Space between "Welcome, ..." and "Logout" */
+  font-weight: 500;   /* Slightly less bold than links */
+}
+
+.app-navbar .nav-logout-button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.app-navbar .nav-logout-button:hover {
+  background-color: white;
+  color: #007bff; /* Blue text on white background on hover */
+}
+
+/* Remove the responsive @media query for now to simplify. 
+   We can add it back once the base desktop layout is correct.
+*/
+/* 
+@media (max-width: 768px) {
+  .app-navbar {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+  .app-navbar ul {
+    gap: 0.5rem; 
+    margin-bottom: 0.5rem; 
+  }
+   .app-navbar .navbar-links ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; 
+  }
+   .app-navbar .navbar-links ul li {
+    width: 100%; 
+  }
+   .app-navbar .navbar-links ul li a {
+    display: block; 
+    padding: 0.5rem 0;
+  }
+  .app-navbar .navbar-user-actions ul {
+    margin-top: 0.5rem; 
+    width: 100%;
+    justify-content: flex-start;
+  }
+   .app-navbar .nav-username {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem; 
+  }
+}
+*/
