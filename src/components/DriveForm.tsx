@@ -53,7 +53,7 @@ const DriveForm: React.FC = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Basic Y3ByZW1ndXJ1bXVraEBnbWFpbC5jb206cHJlbTEyMw==', // Hardcoded Basic Auth
+          'Authorization': 'Bearer ${localStorage.getItem('token')}',
         },
         body: JSON.stringify(payload),
       });

@@ -88,7 +88,7 @@ For testing purposes, the frontend uses a hardcoded Basic Auth token to authenti
 
 - **Username**: `admin@gmail.com`
 - **Password**: `admin123`
-- **Authorization Header**: `Basic Y3ByZW1ndXJ1bXVraEBnbWFpbC5jb206cHJlbTEyMw==`
+- **Authorization Header**: `Bearer ${localStorage.getItem('token')}`
 
 This token is hardcoded in the `DriveForm` component for requests to the `/api/drives` endpoint.
 
